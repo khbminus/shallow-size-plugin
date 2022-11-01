@@ -5,8 +5,10 @@ import org.jetbrains.research.code.submissions.clustering.buildutils.configureDi
 import org.jetbrains.research.code.submissions.clustering.buildutils.createDiktatTask
 
 plugins {
-    kotlin("jvm")
-    id("com.github.gmazzo.buildconfig") version "3.0.3"
+    val kotlinVersion by System.getProperties()
+    `maven-publish`
+    id("tanvd.kosogor") version "1.0.13"
+    kotlin("jvm")//.version(kotlinVersion.toString())
 }
 
 group = "org.example"
@@ -20,6 +22,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
     }
 
     dependencies {
@@ -34,7 +37,7 @@ allprojects {
     }
 
     tasks.withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = "11"
     }
 
     configureDiktat()
