@@ -16,7 +16,6 @@ class ShallowSizeExtensionRegistrar : CompilerPluginRegistrar() {
     override val supportsK2: Boolean
         get() = true
 
-
     override fun ExtensionStorage.registerExtensions(configuration: CompilerConfiguration) {
         configuration.initMessageCollector("shallowsize.log")
         messageCollector = configuration[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]

@@ -12,7 +12,6 @@ import org.jetbrains.kotlin.fir.declarations.utils.isData
 import org.jetbrains.kotlin.fir.extensions.FirDeclarationGenerationExtension
 import org.jetbrains.kotlin.fir.extensions.MemberGenerationContext
 import org.jetbrains.kotlin.fir.moduleData
-import org.jetbrains.kotlin.fir.symbols.SymbolInternals
 import org.jetbrains.kotlin.fir.symbols.impl.ConeClassLikeLookupTagImpl
 import org.jetbrains.kotlin.fir.symbols.impl.FirClassSymbol
 import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
@@ -24,12 +23,10 @@ import org.jub.kotlin.compiler.log
 import org.jub.kotlin.compiler.messageCollector
 
 class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtension(session) {
-    companion object {
-        val MY_CLASS_ID =  ClassId(FqName.fromSegments(listOf("foo", "bar")), Name.identifier("Aboba"))
-        val FOO_ID = CallableId(MY_CLASS_ID, Name.identifier("shallowSize"))
+    object Key : GeneratedDeclarationKey() {
+        override fun toString(): String = "ShallowSizeGeneratorKey"
     }
 
-    val modifiedClasses = mutableSetOf<ClassId>()
     override fun generateFunctions(
         callableId: CallableId,
         context: MemberGenerationContext?
@@ -37,7 +34,6 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
         val owner = context?.owner
         require(owner is FirRegularClassSymbol)
 
-        modifiedClasses.add(owner.classId)
         messageCollector?.log("Generating function with name=${callableId.callableName}, origin=${Key.origin}, owner=${owner.name}")
         return listOf(
             buildSimpleFunction {
@@ -60,7 +56,6 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     private fun ClassId.toConeType(typeArguments: Array<ConeTypeProjection> = emptyArray()) =
         ConeClassLikeTypeImpl(ConeClassLikeLookupTagImpl(this), typeArguments, isNullable = false)
 
-
     override fun getCallableNamesForClass(classSymbol: FirClassSymbol<*>) = if (classSymbol.isData) {
         setOf(FOO_ID.callableName, SpecialNames.INIT)
     } else {
@@ -68,10 +63,8 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     }
 
     override fun getTopLevelClassIds() = setOf<ClassId>()
-
-    object Key : GeneratedDeclarationKey() {
-        override fun toString(): String {
-            return "ShallowSizeGeneratorKey"
-        }
+    companion object {
+        val MY_CLASS_ID = ClassId(FqName.fromSegments(listOf("foo", "bar")), Name.identifier("Aboba"))
+        val FOO_ID = CallableId(MY_CLASS_ID, Name.identifier("shallowSize"))
     }
 }
