@@ -1,4 +1,4 @@
-package org.jub.kotlin.compiler
+package org.jub.kotlin.compiler.ir
 
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension
 import org.jetbrains.kotlin.backend.common.extensions.IrPluginContext

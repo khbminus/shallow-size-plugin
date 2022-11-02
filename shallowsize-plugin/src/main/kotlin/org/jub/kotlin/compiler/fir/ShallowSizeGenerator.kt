@@ -1,4 +1,4 @@
-package org.jub.kotlin.compiler
+package org.jub.kotlin.compiler.fir
 
 import org.jetbrains.kotlin.GeneratedDeclarationKey
 import org.jetbrains.kotlin.descriptors.EffectiveVisibility
@@ -15,10 +15,11 @@ import org.jetbrains.kotlin.fir.symbols.SymbolInternals
 import org.jetbrains.kotlin.fir.symbols.impl.ConeClassLikeLookupTagImpl
 import org.jetbrains.kotlin.fir.symbols.impl.FirClassSymbol
 import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
-import org.jetbrains.kotlin.fir.symbols.impl.FirRegularClassSymbol
 import org.jetbrains.kotlin.fir.types.ConeTypeProjection
 import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.name.*
+import org.jub.kotlin.compiler.log
+import org.jub.kotlin.compiler.messageCollector
 
 class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtension(session) {
     companion object {

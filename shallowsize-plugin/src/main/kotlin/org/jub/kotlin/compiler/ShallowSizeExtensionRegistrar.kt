@@ -7,6 +7,9 @@ import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.fir.extensions.FirExtensionRegistrar
 import org.jetbrains.kotlin.fir.extensions.FirExtensionRegistrarAdapter
+import org.jub.kotlin.compiler.fir.ShallowSizeGenerator
+import org.jub.kotlin.compiler.ir.ShallowSizeIrGenerationExtension
+import org.jub.kotlin.compiler.ir.SimpleIrViewerPlugin
 
 @OptIn(ExperimentalCompilerApi::class)
 class ShallowSizeExtensionRegistrar : CompilerPluginRegistrar() {

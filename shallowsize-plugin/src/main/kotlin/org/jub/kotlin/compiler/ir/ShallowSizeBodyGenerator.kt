@@ -1,4 +1,4 @@
-package org.jub.kotlin.compiler
+package org.jub.kotlin.compiler.ir
 
 import org.jetbrains.kotlin.GeneratedDeclarationKey
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension
@@ -11,6 +11,9 @@ import org.jetbrains.kotlin.ir.expressions.IrConstKind
 import org.jetbrains.kotlin.ir.expressions.impl.IrConstImpl
 import org.jetbrains.kotlin.ir.expressions.impl.IrReturnImpl
 import org.jetbrains.kotlin.ir.visitors.acceptChildrenVoid
+import org.jub.kotlin.compiler.fir.ShallowSizeGenerator
+import org.jub.kotlin.compiler.log
+import org.jub.kotlin.compiler.messageCollector
 
 class ShallowSizeBodyGenerator(pluginContext: IrPluginContext) : AbstractTransformerForGenerator(pluginContext) {
     override fun interestedIn(key: GeneratedDeclarationKey) = key == ShallowSizeGenerator.Key

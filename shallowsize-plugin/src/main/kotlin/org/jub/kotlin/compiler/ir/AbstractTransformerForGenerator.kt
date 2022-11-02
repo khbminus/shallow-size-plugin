@@ -1,4 +1,4 @@
-package org.jub.kotlin.compiler
+package org.jub.kotlin.compiler.ir
 
 import org.jetbrains.kotlin.GeneratedDeclarationKey
 import org.jetbrains.kotlin.backend.common.extensions.IrPluginContext
@@ -11,6 +11,8 @@ import org.jetbrains.kotlin.ir.types.IrSimpleType
 import org.jetbrains.kotlin.ir.util.primaryConstructor
 import org.jetbrains.kotlin.ir.visitors.IrElementVisitorVoid
 import org.jetbrains.kotlin.ir.visitors.acceptChildrenVoid
+import org.jub.kotlin.compiler.log
+import org.jub.kotlin.compiler.messageCollector
 
 abstract class AbstractTransformerForGenerator(context: IrPluginContext) : IrElementVisitorVoid {
     protected val irFactory = context.irFactory
