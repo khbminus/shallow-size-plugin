@@ -13,10 +13,10 @@ import org.jetbrains.kotlin.ir.expressions.impl.IrReturnImpl
 import org.jetbrains.kotlin.ir.visitors.acceptChildrenVoid
 
 class ShallowSizeBodyGenerator(pluginContext: IrPluginContext) : AbstractTransformerForGenerator(pluginContext) {
-    override fun interestedIn(key: GeneratedDeclarationKey) = true
+    override fun interestedIn(key: GeneratedDeclarationKey) = key == ShallowSizeGenerator.Key
 
     override fun generateBodyForFunction(function: IrSimpleFunction, key: GeneratedDeclarationKey): IrBody {
-        messageCollector?.log("Started IR: ${function.name.asString()}")
+        messageCollector?.log("Started IR: ${function.name}")
         require(function.name == ShallowSizeGenerator.FOO_ID.callableName)
         val const = IrConstImpl(-1, -1, irBuiltIns.intType, IrConstKind.Int, value = 0)
         val returnStatement = IrReturnImpl(-1, -1, irBuiltIns.nothingType, function.symbol, const)

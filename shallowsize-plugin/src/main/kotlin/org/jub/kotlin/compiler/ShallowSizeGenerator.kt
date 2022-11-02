@@ -30,14 +30,11 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
         callableId: CallableId,
         context: MemberGenerationContext?
     ): List<FirNamedFunctionSymbol> {
-        println("here")
         messageCollector?.log("Started FIR")
-        val owner = context?.owner
-        require(owner is FirRegularClassSymbol)
 //        if (!owner.fir.isData) {
 //            return emptyList()
 //        }
-        messageCollector?.log(owner.toString())
+        messageCollector?.log("Generating function with name=${callableId.callableName}, origin=${Key.origin}")
 //        val matchedClassId = owner.fir.matchedClass ?: return emptyList()
 //        val matchedClassSymbol = session.symbolProvider.getClassLikeSymbolByClassId(matchedClassId)
         return listOf(
@@ -45,13 +42,13 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
                 resolvePhase = FirResolvePhase.BODY_RESOLVE
                 moduleData = session.moduleData
                 origin = Key.origin
-                name = callableId.callableName
-                returnTypeRef = session.builtinTypes.intType
                 status = FirResolvedDeclarationStatusImpl(
                     Visibilities.Public,
                     Modality.FINAL,
                     EffectiveVisibility.Public
                 )
+                returnTypeRef = session.builtinTypes.intType
+                name = callableId.callableName
                 dispatchReceiverType = callableId.classId?.toConeType()
                 symbol = FirNamedFunctionSymbol(callableId)
             }.symbol
@@ -70,5 +67,9 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
 
     override fun getTopLevelClassIds() = setOf(MY_CLASS_ID)
 
-    object Key : GeneratedDeclarationKey()
+    object Key : GeneratedDeclarationKey() {
+        override fun toString(): String {
+            return "ShallowSizeGeneratorKey"
+        }
+    }
 }
