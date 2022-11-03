@@ -5,9 +5,10 @@ import org.jetbrains.kotlin.descriptors.EffectiveVisibility
 import org.jetbrains.kotlin.descriptors.Modality
 import org.jetbrains.kotlin.descriptors.Visibilities
 import org.jetbrains.kotlin.fir.FirSession
-import org.jetbrains.kotlin.fir.declarations.*
+import org.jetbrains.kotlin.fir.declarations.FirResolvePhase
 import org.jetbrains.kotlin.fir.declarations.builder.buildSimpleFunction
 import org.jetbrains.kotlin.fir.declarations.impl.FirResolvedDeclarationStatusImpl
+import org.jetbrains.kotlin.fir.declarations.origin
 import org.jetbrains.kotlin.fir.declarations.utils.isData
 import org.jetbrains.kotlin.fir.extensions.FirDeclarationGenerationExtension
 import org.jetbrains.kotlin.fir.extensions.MemberGenerationContext
@@ -19,6 +20,7 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirRegularClassSymbol
 import org.jetbrains.kotlin.fir.types.ConeTypeProjection
 import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.name.*
+import org.jub.kotlin.compiler.PluginConfig
 import org.jub.kotlin.compiler.log
 import org.jub.kotlin.compiler.messageCollector
 
@@ -56,13 +58,18 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     private fun ClassId.toConeType(typeArguments: Array<ConeTypeProjection> = emptyArray()) =
         ConeClassLikeTypeImpl(ConeClassLikeLookupTagImpl(this), typeArguments, isNullable = false)
 
-    override fun getCallableNamesForClass(classSymbol: FirClassSymbol<*>) = if (classSymbol.isData) {
+    private fun isInterestedIn(classSymbol: FirClassSymbol<*>) : Boolean {
+        return classSymbol.isData && classSymbol.classId.asFqNameString() !in PluginConfig.excludedClasses
+    }
+
+    override fun getCallableNamesForClass(classSymbol: FirClassSymbol<*>) = if (isInterestedIn(classSymbol)) {
         setOf(FOO_ID.callableName, SpecialNames.INIT)
     } else {
         emptySet()
     }
 
     override fun getTopLevelClassIds() = setOf<ClassId>()
+
     companion object {
         val MY_CLASS_ID = ClassId(FqName.fromSegments(listOf("foo", "bar")), Name.identifier("Aboba"))
         val FOO_ID = CallableId(MY_CLASS_ID, Name.identifier("shallowSize"))
