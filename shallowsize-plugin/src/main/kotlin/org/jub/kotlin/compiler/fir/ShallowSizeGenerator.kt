@@ -36,7 +36,8 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
         val owner = context?.owner
         require(owner is FirRegularClassSymbol)
 
-        messageCollector?.log("Generating function with name=${callableId.callableName}, origin=${Key.origin}, owner=${owner.name}")
+        messageCollector?.log("Generating function with name=${callableId.callableName}," +
+                " origin=${Key.origin}, owner=${owner.name}")
         return listOf(
             buildSimpleFunction {
                 resolvePhase = FirResolvePhase.BODY_RESOLVE
@@ -63,7 +64,7 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     }
 
     override fun getCallableNamesForClass(classSymbol: FirClassSymbol<*>) = if (isInterestedIn(classSymbol)) {
-        setOf(FOO_ID.callableName, SpecialNames.INIT)
+        setOf(FUNCTION_NAME, SpecialNames.INIT)
     } else {
         emptySet()
     }
@@ -71,7 +72,6 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     override fun getTopLevelClassIds() = setOf<ClassId>()
 
     companion object {
-        val MY_CLASS_ID = ClassId(FqName.fromSegments(listOf("foo", "bar")), Name.identifier("Aboba"))
-        val FOO_ID = CallableId(MY_CLASS_ID, Name.identifier("shallowSize"))
+        val FUNCTION_NAME = Name.identifier("shallowSize")
     }
 }

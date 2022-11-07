@@ -20,7 +20,6 @@ class ExtensionRegistrarConfigurator(testServices: TestServices) : EnvironmentCo
         configuration: CompilerConfiguration
     ) {
         FirExtensionRegistrarAdapter.registerExtension(ShallowSizeFirExtensionRegistrar())
-        IrGenerationExtension.registerExtension(SimpleIrViewerPlugin())
         IrGenerationExtension.registerExtension(ShallowSizeIrGenerationExtension())
     }
 }

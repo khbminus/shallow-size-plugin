@@ -6,5 +6,6 @@ import org.jub.kotlin.compiler.fir.ShallowSizeGenerator
 class ShallowSizeFirExtensionRegistrar : FirExtensionRegistrar() {
     override fun ExtensionRegistrarContext.configurePlugin() {
         +::ShallowSizeGenerator
+        +::ShallowSizeChecker
     }
 }
