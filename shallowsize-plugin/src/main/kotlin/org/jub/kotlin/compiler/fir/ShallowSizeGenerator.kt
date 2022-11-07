@@ -59,9 +59,7 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     private fun ClassId.toConeType(typeArguments: Array<ConeTypeProjection> = emptyArray()) =
         ConeClassLikeTypeImpl(ConeClassLikeLookupTagImpl(this), typeArguments, isNullable = false)
 
-    private fun isInterestedIn(classSymbol: FirClassSymbol<*>) : Boolean {
-        return classSymbol.isData && classSymbol.classId.asFqNameString() !in PluginConfig.excludedClasses
-    }
+    private fun isInterestedIn(classSymbol: FirClassSymbol<*>): Boolean = classSymbol.isData && classSymbol.classId.asFqNameString() !in PluginConfig.excludedClasses
 
     override fun getCallableNamesForClass(classSymbol: FirClassSymbol<*>) = if (isInterestedIn(classSymbol)) {
         setOf(FUNCTION_NAME, SpecialNames.INIT)

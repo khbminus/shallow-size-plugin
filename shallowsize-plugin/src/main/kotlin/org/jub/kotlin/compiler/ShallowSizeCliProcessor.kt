@@ -7,6 +7,7 @@ import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.config.CompilerConfigurationKey
 
+private typealias CompilationKeyList<T> = CompilerConfigurationKey<List<T>>
 @OptIn(ExperimentalCompilerApi::class)
 class ShallowSizeCliProcessor : CommandLineProcessor {
     override val pluginId: String
@@ -21,7 +22,7 @@ class ShallowSizeCliProcessor : CommandLineProcessor {
         }
     }
 
-    private fun <T> CompilerConfiguration.extendItem(configurationKey: CompilerConfigurationKey<List<T>>, value: T) {
+    private fun <T> CompilerConfiguration.extendItem(configurationKey: CompilationKeyList<T>, value: T) {
         val list = get(configurationKey) ?: emptyList()
         put(configurationKey, list + value)
     }
