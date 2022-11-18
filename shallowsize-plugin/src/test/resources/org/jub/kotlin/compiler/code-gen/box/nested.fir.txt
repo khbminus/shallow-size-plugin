@@ -1,0 +1,41 @@
+FILE: nested.kt
+    package org.jub.kotlin.compiler.code-gen.box
+
+    public final data class Nested : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/box/Nested| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Int| = R|<local>/a|
+            public get(): R|kotlin/Int|
+
+        public final data class Nested2 : R|kotlin/Any| {
+            public constructor(B: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final val B: R|kotlin/Int| = R|<local>/B|
+                public get(): R|kotlin/Int|
+
+            public final operator fun component1(): R|kotlin/Int|
+
+            public final fun copy(B: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2|.R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2.B|): R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2|
+
+            public final fun shallowSize(): R|kotlin/Int|
+
+        }
+
+        public final val c: R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2| = R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2.Nested2|(this@R|org/jub/kotlin/compiler/code-gen/box/Nested|.R|org/jub/kotlin/compiler/code-gen/box/Nested.a|)
+            public get(): R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2|
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(a: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/box/Nested|.R|org/jub/kotlin/compiler/code-gen/box/Nested.a|): R|org/jub/kotlin/compiler/code-gen/box/Nested|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }
+    public final fun box3(): R|kotlin/Int| {
+        lval a: R|org/jub/kotlin/compiler/code-gen/box/Nested| = R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested|(Int(1))
+        ^box3 R|<local>/a|.R|org/jub/kotlin/compiler/code-gen/box/Nested.shallowSize|().R|kotlin/Int.plus|(R|<local>/a|.R|org/jub/kotlin/compiler/code-gen/box/Nested.c|.R|org/jub/kotlin/compiler/code-gen/box/Nested.Nested2.shallowSize|())
+    }

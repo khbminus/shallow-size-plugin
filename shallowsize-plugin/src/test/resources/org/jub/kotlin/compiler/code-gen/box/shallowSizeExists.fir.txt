@@ -1,0 +1,22 @@
+FILE: shallowSizeExists.kt
+    package org.jub.kotlin.compiler.box
+
+    public final data class ShallowSizeExists : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|org/jub/kotlin/compiler/box/ShallowSizeExists| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Int| = R|<local>/a|
+            public get(): R|kotlin/Int|
+
+        public final fun shallowSize(): R|kotlin/String| {
+            ^shallowSize String(Huh)
+        }
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(a: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/box/ShallowSizeExists|.R|org/jub/kotlin/compiler/box/ShallowSizeExists.a|): R|org/jub/kotlin/compiler/box/ShallowSizeExists|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }

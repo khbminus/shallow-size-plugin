@@ -1,0 +1,40 @@
+FILE: simple.kt
+    package foo.bar
+
+    public final class Aboba : R|kotlin/Any| {
+        public constructor(): R|foo/bar/Aboba| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun a(): R|kotlin/Int| {
+            ^a Int(0)
+        }
+
+    }
+    public final data class A : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|foo/bar/A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Int| = R|<local>/a|
+            public get(): R|kotlin/Int|
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(a: R|kotlin/Int| = this@R|foo/bar/A|.R|foo/bar/A.a|): R|foo/bar/A|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }
+    public final fun box(): R|kotlin/Int| {
+        lval a: R|foo/bar/A| = R|foo/bar/A.A|(Int(2))
+        ^box when () {
+            ==(R|<local>/a|.R|foo/bar/A.shallowSize|(), Int(4)) ->  {
+                Int(1)
+            }
+            else ->  {
+                Int(0)
+            }
+        }
+
+    }

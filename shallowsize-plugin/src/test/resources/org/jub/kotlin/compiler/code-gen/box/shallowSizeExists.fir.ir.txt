@@ -1,0 +1,100 @@
+FILE fqName:org.jub.kotlin.compiler.box fileName:/shallowSizeExists.kt
+  CLASS CLASS name:ShallowSizeExists modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+    CONSTRUCTOR visibility:public <> (a:kotlin.Int) returnType:org.jub.kotlin.compiler.box.ShallowSizeExists [primary]
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:ShallowSizeExists modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+    PROPERTY name:a visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.box.ShallowSizeExists.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-a> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:a visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-a> (): kotlin.Int declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.<get-a>' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+    FUN name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.String
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.String declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          CONST String type=kotlin.String value="Huh"
+    FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.component1' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+    FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists, a:kotlin.Int) returnType:org.jub.kotlin.compiler.box.ShallowSizeExists
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.copy' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (a: kotlin.Int): org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.box.ShallowSizeExists' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+            a: GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.box.ShallowSizeExists.copy' type=kotlin.Int origin=null
+    FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          CONST Int type=kotlin.Int value=4
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.box.ShallowSizeExists
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:org.jub.kotlin.compiler.box.ShallowSizeExists [val]
+          TYPE_OP type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=CAST typeOperand=org.jub.kotlin.compiler.box.ShallowSizeExists
+            GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_0: org.jub.kotlin.compiler.box.ShallowSizeExists [val] declared in org.jub.kotlin.compiler.box.ShallowSizeExists.equals' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.hashCode' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.box.ShallowSizeExists) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.box.ShallowSizeExists
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.box.ShallowSizeExists'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="ShallowSizeExists("
+            CONST String type=kotlin.String value="a="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.box.ShallowSizeExists declared in org.jub.kotlin.compiler.box.ShallowSizeExists.toString' type=org.jub.kotlin.compiler.box.ShallowSizeExists origin=null
+            CONST String type=kotlin.String value=")"
