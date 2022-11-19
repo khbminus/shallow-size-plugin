@@ -4,8 +4,6 @@ group = rootProject.group
 version = rootProject.version
 
 dependencies {
-    val kotlinVersion by System.getProperties()
-    val junitPlatformVersion = "1.9.0"
 
     kotlin("compiler")
         .let {
@@ -13,20 +11,20 @@ dependencies {
             testImplementation(it)
         }
 
-    testRuntimeOnly("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
-    testRuntimeOnly("org.jetbrains.kotlin:kotlin-script-runtime:$kotlinVersion")
-    testRuntimeOnly("org.jetbrains.kotlin:kotlin-annotations-jvm:$kotlinVersion")
 
-    testImplementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
-    testImplementation("org.jetbrains.kotlin:kotlin-compiler-internal-test-framework:$kotlinVersion")
-    testImplementation("junit:junit:4.12")
+    testRuntimeOnly(libs.kotlin.test)
+    testRuntimeOnly(libs.kotlin.script.runtime)
+    testRuntimeOnly(libs.kotlin.annotations.jvm)
 
-    testImplementation(platform("org.junit:junit-bom:5.8.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
-    testImplementation("org.junit.platform:junit-platform-commons:$junitPlatformVersion")
-    testImplementation("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
-    testImplementation("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
-    testImplementation("org.junit.platform:junit-platform-suite-api:$junitPlatformVersion")
+    testImplementation(libs.kotlin.compiler.internal.test.framework)
+    testImplementation(libs.kotlin.reflect)
+
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.platform.commons)
+    testImplementation(libs.junit.platform.launcher)
+    testImplementation(libs.junit.platform.runner)
+    testImplementation(libs.junit.platform.suite.api)
 }
 
 tasks.withType<Test> {

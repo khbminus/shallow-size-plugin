@@ -8,3 +8,11 @@ pluginManagement {
         kotlin("jvm") version "1.8.20-dev-1278"
     }
 }
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
