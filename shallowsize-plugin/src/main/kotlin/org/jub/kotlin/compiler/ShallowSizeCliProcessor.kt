@@ -37,7 +37,7 @@ class ShallowSizeCliProcessor : CommandLineProcessor {
         )
         internal val EXCLUDE_OPTION = CliOption(
             optionName = "exclude",
-            valueDescription = "<path to data class>",
+            valueDescription = "<fqname of data class>",
             description = "Exclude data class from adding shallowSize method",
             allowMultipleOccurrences = true,
             required = false

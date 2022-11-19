@@ -21,7 +21,9 @@ class ShallowSizeBodyGenerator(pluginContext: IrPluginContext) : IrElementVisito
     private fun isInterestedIn(key: GeneratedDeclarationKey) = key == ShallowSizeGenerator.Key
 
     private fun generateBodyForFunction(function: IrSimpleFunction): IrBody {
-        require(function.name == ShallowSizeGenerator.FUNCTION_NAME)
+        require(function.name == ShallowSizeGenerator.FUNCTION_NAME) {
+            "ShallowSizeBodyGenerator is triggered on not shallowSize's generated function"
+        }
         val size = function.parent.accept(ShallowSizeIrSizeCalculator(), null)
         messageCollector?.log("Ir transform of ${function.name} from ${function.parent.kotlinFqName}, size=$size")
         val const = IrConstImpl(
