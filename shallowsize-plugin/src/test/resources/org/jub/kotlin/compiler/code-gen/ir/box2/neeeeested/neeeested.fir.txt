@@ -1,0 +1,41 @@
+FILE: neeeested.kt
+    package org.jub.kotlin.compiler.code-gen.box
+
+    public final data class Neeeested : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/box/Neeeested| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Int| = R|<local>/a|
+            public get(): R|kotlin/Int|
+
+        public final data class Neeeeested2 : R|kotlin/Any| {
+            public constructor(B: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final val B: R|kotlin/Int| = R|<local>/B|
+                public get(): R|kotlin/Int|
+
+            public final operator fun component1(): R|kotlin/Int|
+
+            public final fun copy(B: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2.B|): R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2|
+
+            public final fun shallowSize(): R|kotlin/Int|
+
+        }
+
+        public final val c: R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2| = R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2.Neeeeested2|(this@R|org/jub/kotlin/compiler/code-gen/box/Neeeested|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.a|)
+            public get(): R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2|
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(a: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/box/Neeeested|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.a|): R|org/jub/kotlin/compiler/code-gen/box/Neeeested|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }
+    public final fun box3(): R|kotlin/Int| {
+        lval a: R|org/jub/kotlin/compiler/code-gen/box/Neeeested| = R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeested|(Int(1))
+        ^box3 R|<local>/a|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.shallowSize|().R|kotlin/Int.plus|(R|<local>/a|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.c|.R|org/jub/kotlin/compiler/code-gen/box/Neeeested.Neeeeested2.shallowSize|())
+    }

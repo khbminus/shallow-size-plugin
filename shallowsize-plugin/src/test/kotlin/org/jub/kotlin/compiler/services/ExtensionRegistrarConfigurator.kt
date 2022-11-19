@@ -10,7 +10,6 @@ import org.jetbrains.kotlin.test.services.EnvironmentConfigurator
 import org.jetbrains.kotlin.test.services.TestServices
 import org.jub.kotlin.compiler.fir.ShallowSizeFirExtensionRegistrar
 import org.jub.kotlin.compiler.ir.ShallowSizeIrGenerationExtension
-import org.jub.kotlin.compiler.ir.SimpleIrViewerPlugin
 
 class ExtensionRegistrarConfigurator(testServices: TestServices) : EnvironmentConfigurator(testServices) {
     // Imitate the behaviour of the plugin

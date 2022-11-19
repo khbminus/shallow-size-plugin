@@ -5,7 +5,6 @@ import org.jetbrains.research.code.submissions.clustering.buildutils.configureDi
 import org.jetbrains.research.code.submissions.clustering.buildutils.createDiktatTask
 
 plugins {
-    val kotlinVersion by System.getProperties()
     `maven-publish`
     id("tanvd.kosogor") version "1.0.13"
     kotlin("jvm")//.version(kotlinVersion.toString())

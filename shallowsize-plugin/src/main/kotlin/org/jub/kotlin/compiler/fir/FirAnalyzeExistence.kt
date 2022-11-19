@@ -8,15 +8,19 @@ import org.jetbrains.kotlin.fir.analysis.checkers.declaration.DeclarationChecker
 import org.jetbrains.kotlin.fir.analysis.checkers.declaration.FirRegularClassChecker
 import org.jetbrains.kotlin.fir.analysis.extensions.FirAdditionalCheckersExtension
 import org.jetbrains.kotlin.fir.declarations.FirRegularClass
+import org.jetbrains.kotlin.fir.symbols.SymbolInternals
 import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
 
 internal object FirAnalyzeExistence : FirRegularClassChecker() {
+    @OptIn(SymbolInternals::class)
     override fun check(declaration: FirRegularClass, context: CheckerContext, reporter: DiagnosticReporter) {
         declaration
             .symbol
             .declarationSymbols
+            .asSequence()
             .filterIsInstance<FirNamedFunctionSymbol>()
-            .filter { it.name.identifier == "shallowSize" }
+            .filter { it.name == ShallowSizeGenerator.FUNCTION_NAME }
+            .filter { it.fir.valueParameters.isEmpty() } // If overloads are possible
             .forEach {
                 reporter.reportOn(it.source, Errors.FUNCTION_EXISTS, context)
             }

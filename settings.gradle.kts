@@ -8,7 +8,8 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
     }
     plugins {
-        kotlin("jvm") version "1.8.20-dev-1278"
+        val kotlinVersion: String by System.getProperties()
+        kotlin("jvm").version(kotlinVersion)
     }
 }
 include("shallowsize-plugin")

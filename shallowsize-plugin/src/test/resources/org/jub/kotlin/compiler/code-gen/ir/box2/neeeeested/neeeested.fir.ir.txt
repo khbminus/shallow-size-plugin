@@ -1,0 +1,214 @@
+FILE fqName:org.jub.kotlin.compiler.code-gen.box fileName:/neeeested.kt
+  CLASS CLASS name:Neeeested modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+    CONSTRUCTOR visibility:public <> (a:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.Neeeested [primary]
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Neeeested modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+    PROPERTY name:a visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-a> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:a visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-a> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.<get-a>' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+    CLASS CLASS name:Neeeeested2 modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+      $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+      CONSTRUCTOR visibility:public <> (B:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 [primary]
+        VALUE_PARAMETER name:B index:0 type:kotlin.Int
+        BLOCK_BODY
+          DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+          INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Neeeeested2 modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+      PROPERTY name:B visibility:public modality:FINAL [val]
+        FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]
+          EXPRESSION_BODY
+            GET_VAR 'B: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-B> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2) returnType:kotlin.Int
+          correspondingProperty: PROPERTY name:B visibility:public modality:FINAL [val]
+          $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+          BLOCK_BODY
+            RETURN type=kotlin.Nothing from='public final fun <get-B> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+              GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.<get-B>' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+      FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2) returnType:kotlin.Int [operator]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.component1' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+      FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2, B:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        VALUE_PARAMETER name:B index:0 type:kotlin.Int
+          EXPRESSION_BODY
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.copy' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun copy (B: kotlin.Int): org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            CONSTRUCTOR_CALL 'public constructor <init> (B: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+              B: GET_VAR 'B: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.copy' type=kotlin.Int origin=null
+      FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2) returnType:kotlin.Int
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            CONST Int type=kotlin.Int value=4
+      FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2, other:kotlin.Any?) returnType:kotlin.Boolean
+        overridden:
+          public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+        BLOCK_BODY
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+                arg0: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+                arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=kotlin.Any? origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+                CONST Boolean type=kotlin.Boolean value=true
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+                GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=kotlin.Any? origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+                CONST Boolean type=kotlin.Boolean value=false
+          VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 [val]
+            TYPE_OP type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=kotlin.Any? origin=null
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                  arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                    receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+                  arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                    receiver: GET_VAR 'val tmp_0: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 [val] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+                CONST Boolean type=kotlin.Boolean value=false
+          RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            CONST Boolean type=kotlin.Boolean value=true
+      FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2) returnType:kotlin.Int
+        overridden:
+          public open fun hashCode (): kotlin.Int declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.hashCode' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+      FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2) returnType:kotlin.String
+        overridden:
+          public open fun toString (): kotlin.String declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2'
+            STRING_CONCATENATION type=kotlin.String
+              CONST String type=kotlin.String value="Neeeeested2("
+              CONST String type=kotlin.String value="B="
+              GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:B type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2.toString' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+              CONST String type=kotlin.String value=")"
+    PROPERTY name:c visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:c type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 visibility:private [final]
+        EXPRESSION_BODY
+          CONSTRUCTOR_CALL 'public constructor <init> (B: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+            B: CALL 'public final fun <get-a> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=kotlin.Int origin=GET_PROPERTY
+              $this: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-c> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2
+        correspondingProperty: PROPERTY name:c visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-c> (): org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:c type:org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 visibility:private [final]' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.<get-c>' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+    FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.component1' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+    FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested, a:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.copy' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (a: kotlin.Int): org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+            a: GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.copy' type=kotlin.Int origin=null
+    FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          CONST Int type=kotlin.Int value=12
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.box.Neeeested
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_1 type:org.jub.kotlin.compiler.code-gen.box.Neeeested [val]
+          TYPE_OP type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.box.Neeeested
+            GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_1: org.jub.kotlin.compiler.code-gen.box.Neeeested [val] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.equals' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.hashCode' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.Neeeested) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.Neeeested
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.Neeeested'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="Neeeested("
+            CONST String type=kotlin.String value="a="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.Neeeested declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.toString' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+            CONST String type=kotlin.String value=")"
+  FUN name:box3 visibility:public modality:FINAL <> () returnType:kotlin.Int
+    BLOCK_BODY
+      VAR name:a type:org.jub.kotlin.compiler.code-gen.box.Neeeested [val]
+        CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+          a: CONST Int type=kotlin.Int value=1
+      RETURN type=kotlin.Nothing from='public final fun box3 (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box'
+        CALL 'public final fun plus (other: kotlin.Int): kotlin.Int [operator] declared in kotlin.Int' type=kotlin.Int origin=PLUS
+          $this: CALL 'public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=kotlin.Int origin=null
+            $this: GET_VAR 'val a: org.jub.kotlin.compiler.code-gen.box.Neeeested [val] declared in org.jub.kotlin.compiler.code-gen.box.box3' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null
+          other: CALL 'public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2' type=kotlin.Int origin=null
+            $this: CALL 'public final fun <get-c> (): org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 declared in org.jub.kotlin.compiler.code-gen.box.Neeeested' type=org.jub.kotlin.compiler.code-gen.box.Neeeested.Neeeeested2 origin=GET_PROPERTY
+              $this: GET_VAR 'val a: org.jub.kotlin.compiler.code-gen.box.Neeeested [val] declared in org.jub.kotlin.compiler.code-gen.box.box3' type=org.jub.kotlin.compiler.code-gen.box.Neeeested origin=null

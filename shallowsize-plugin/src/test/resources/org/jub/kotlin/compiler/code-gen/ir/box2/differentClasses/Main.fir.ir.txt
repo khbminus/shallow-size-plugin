@@ -1,0 +1,365 @@
+FILE fqName:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses fileName:/Main.kt
+  CLASS CLASS name:A modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+    CONSTRUCTOR visibility:public <> (a:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A [primary]
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:A modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+    PROPERTY name:a visibility:private modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-a> visibility:private modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:a visibility:private modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='private final fun <get-a> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.<get-a>' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+    FUN name:f visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.String
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun f (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          CONST String type=kotlin.String value="String"
+    FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.component1' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+    FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A, a:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.copy' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (a: kotlin.Int): org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+            a: GET_VAR 'a: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.copy' type=kotlin.Int origin=null
+    FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          CONST Int type=kotlin.Int value=4
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A [val]
+          TYPE_OP type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+            GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_0: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A [val] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.hashCode' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="A("
+            CONST String type=kotlin.String value="a="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A.toString' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.A origin=null
+            CONST String type=kotlin.String value=")"
+  CLASS CLASS name:B modality:FINAL visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.B
+    CONSTRUCTOR visibility:public <> () returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.B [primary]
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:B modality:FINAL visibility:public superTypes:[kotlin.Any]'
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+  CLASS ENUM_CLASS name:C modality:FINAL visibility:public superTypes:[kotlin.Enum<org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C>]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C
+    CONSTRUCTOR visibility:private <> () returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C [primary]
+      BLOCK_BODY
+        ENUM_CONSTRUCTOR_CALL 'public constructor <init> (name: kotlin.String, ordinal: kotlin.Int) [primary] declared in kotlin.Enum'
+          <E>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS ENUM_CLASS name:C modality:FINAL visibility:public superTypes:[kotlin.Enum<org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C>]'
+    ENUM_ENTRY name:A
+      init: EXPRESSION_BODY
+        ENUM_CONSTRUCTOR_CALL 'private constructor <init> () [primary] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C'
+    ENUM_ENTRY name:B
+      init: EXPRESSION_BODY
+        ENUM_CONSTRUCTOR_CALL 'private constructor <init> () [primary] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C'
+    ENUM_ENTRY name:C
+      init: EXPRESSION_BODY
+        ENUM_CONSTRUCTOR_CALL 'private constructor <init> () [primary] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C'
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C>
+      SYNTHETIC_BODY kind=ENUM_VALUES
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C
+      VALUE_PARAMETER name:value index:0 type:kotlin.String
+      SYNTHETIC_BODY kind=ENUM_VALUEOF
+    FUN FAKE_OVERRIDE name:clone visibility:protected modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:kotlin.Any [fake_override]
+      overridden:
+        protected final fun clone (): kotlin.Any declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+    FUN FAKE_OVERRIDE name:compareTo visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>, other:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C) returnType:kotlin.Int [fake_override,operator]
+      overridden:
+        public final fun compareTo (other: E of kotlin.Enum): kotlin.Int [operator] declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+      VALUE_PARAMETER name:other index:0 type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public final fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:kotlin.Int [fake_override]
+      overridden:
+        public final fun hashCode (): kotlin.Int declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+    PROPERTY FAKE_OVERRIDE name:name visibility:public modality:FINAL [fake_override,val]
+      annotations:
+        IntrinsicConstEvaluation
+      overridden:
+        public final name: kotlin.String [val]
+      FUN FAKE_OVERRIDE name:<get-name> visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:kotlin.String [fake_override]
+        correspondingProperty: PROPERTY FAKE_OVERRIDE name:name visibility:public modality:FINAL [fake_override,val]
+        overridden:
+          public final fun <get-name> (): kotlin.String declared in kotlin.Enum
+        $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+    PROPERTY FAKE_OVERRIDE name:ordinal visibility:public modality:FINAL [fake_override,val]
+      overridden:
+        public final ordinal: kotlin.Int [val]
+      FUN FAKE_OVERRIDE name:<get-ordinal> visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:kotlin.Int [fake_override]
+        correspondingProperty: PROPERTY FAKE_OVERRIDE name:ordinal visibility:public modality:FINAL [fake_override,val]
+        overridden:
+          public final fun <get-ordinal> (): kotlin.Int declared in kotlin.Enum
+        $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+    FUN FAKE_OVERRIDE name:getDeclaringClass visibility:public modality:FINAL <> ($this:kotlin.Enum<E of kotlin.Enum>) returnType:@[FlexibleNullability] java.lang.Class<@[FlexibleNullability] org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.C?>? [fake_override]
+      overridden:
+        public final fun getDeclaringClass (): @[FlexibleNullability] java.lang.Class<@[FlexibleNullability] E of kotlin.Enum?>? declared in kotlin.Enum
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Enum<E of kotlin.Enum>
+  CLASS CLASS name:D modality:FINAL visibility:public [value] superTypes:[kotlin.Any]
+    annotations:
+      JvmInline
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+    CONSTRUCTOR visibility:public <> (s:kotlin.String) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D [primary]
+      VALUE_PARAMETER name:s index:0 type:kotlin.String
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:D modality:FINAL visibility:public [value] superTypes:[kotlin.Any]'
+    PROPERTY name:s visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 's: kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.<init>' type=kotlin.String origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-s> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D) returnType:kotlin.String
+        correspondingProperty: PROPERTY name:s visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-s> (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]' type=kotlin.String origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.<get-s>' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=null
+    FUN GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+      VALUE_PARAMETER GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_1 type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D [val]
+          TYPE_OP type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+            GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]' type=kotlin.String origin=null
+                  receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]' type=kotlin.String origin=null
+                  receiver: GET_VAR 'val tmp_1: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D [val] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.String' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]' type=kotlin.String origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.hashCode' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=null
+    FUN GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_SINGLE_FIELD_VALUE_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="D("
+            CONST String type=kotlin.String value="s="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:s type:kotlin.String visibility:private [final]' type=kotlin.String origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D.toString' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.D origin=null
+            CONST String type=kotlin.String value=")"
+  CLASS CLASS name:E modality:FINAL visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E
+    CONSTRUCTOR visibility:public <> () returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E [primary]
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:E modality:FINAL visibility:public superTypes:[kotlin.Any]'
+    CLASS CLASS name:F modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+      $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+      CONSTRUCTOR visibility:public <> (x:kotlin.Double) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F [primary]
+        VALUE_PARAMETER name:x index:0 type:kotlin.Double
+        BLOCK_BODY
+          DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+          INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:F modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+      PROPERTY name:x visibility:public modality:FINAL [val]
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]
+          EXPRESSION_BODY
+            GET_VAR 'x: kotlin.Double declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.<init>' type=kotlin.Double origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F) returnType:kotlin.Double
+          correspondingProperty: PROPERTY name:x visibility:public modality:FINAL [val]
+          $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+          BLOCK_BODY
+            RETURN type=kotlin.Nothing from='public final fun <get-x> (): kotlin.Double declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+              GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.<get-x>' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+      FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F) returnType:kotlin.Double [operator]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Double [operator] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.component1' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+      FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F, x:kotlin.Double) returnType:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        VALUE_PARAMETER name:x index:0 type:kotlin.Double
+          EXPRESSION_BODY
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.copy' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun copy (x: kotlin.Double): org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            CONSTRUCTOR_CALL 'public constructor <init> (x: kotlin.Double) [primary] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+              x: GET_VAR 'x: kotlin.Double declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.copy' type=kotlin.Double origin=null
+      FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F) returnType:kotlin.Int
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            CONST Int type=kotlin.Int value=8
+      FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F, other:kotlin.Any?) returnType:kotlin.Boolean
+        overridden:
+          public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+        BLOCK_BODY
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+                arg0: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+                arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=kotlin.Any? origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+                CONST Boolean type=kotlin.Boolean value=true
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+                GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=kotlin.Any? origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+                CONST Boolean type=kotlin.Boolean value=false
+          VAR IR_TEMPORARY_VARIABLE name:tmp_2 type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F [val]
+            TYPE_OP type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=kotlin.Any? origin=null
+          WHEN type=kotlin.Unit origin=null
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                  arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+                    receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+                  arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+                    receiver: GET_VAR 'val tmp_2: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F [val] declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.equals' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+              then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+                CONST Boolean type=kotlin.Boolean value=false
+          RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            CONST Boolean type=kotlin.Boolean value=true
+      FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F) returnType:kotlin.Int
+        overridden:
+          public open fun hashCode (): kotlin.Int declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Double' type=kotlin.Int origin=null
+              $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.hashCode' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+      FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F) returnType:kotlin.String
+        overridden:
+          public open fun toString (): kotlin.String declared in kotlin.Any
+        $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F'
+            STRING_CONCATENATION type=kotlin.String
+              CONST String type=kotlin.String value="F("
+              CONST String type=kotlin.String value="x="
+              GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Double visibility:private [final]' type=kotlin.Double origin=null
+                receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F declared in org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F.toString' type=org.jub.kotlin.compiler.code-gen.box.fir.differentClasses.E.F origin=null
+              CONST String type=kotlin.String value=")"
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any

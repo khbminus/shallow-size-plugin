@@ -1,0 +1,22 @@
+FILE: MoreSilly.kt
+    package org.jub.kotlin.compiler.code-gen.fir.box.silly
+
+    public final data class MoreSilly : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Double|): R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Double| = R|<local>/a|
+            public get(): R|kotlin/Double|
+
+        public final fun shallowSize(): R|kotlin/Double| {
+            ^shallowSize this@R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly|.R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly.a|
+        }
+
+        public final operator fun component1(): R|kotlin/Double|
+
+        public final fun copy(a: R|kotlin/Double| = this@R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly|.R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly.a|): R|org/jub/kotlin/compiler/code-gen/fir/box/silly/MoreSilly|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }

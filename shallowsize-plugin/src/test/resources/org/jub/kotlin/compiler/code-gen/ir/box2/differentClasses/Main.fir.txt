@@ -1,0 +1,77 @@
+FILE: Main.kt
+    package org.jub.kotlin.compiler.code-gen.box.fir.differentClasses
+
+    public final data class A : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/A| {
+            super<R|kotlin/Any|>()
+        }
+
+        private final val a: R|kotlin/Int| = R|<local>/a|
+            private get(): R|kotlin/Int|
+
+        public final fun f(): R|kotlin/String| {
+            ^f String(String)
+        }
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(a: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/A|.R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/A.a|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/A|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }
+    public final class B : R|kotlin/Any| {
+        public constructor(): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/B| {
+            super<R|kotlin/Any|>()
+        }
+
+    }
+    public final enum class C : R|kotlin/Enum<org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C>| {
+        private constructor(): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C| {
+            super<R|kotlin/Enum<org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C>|>()
+        }
+
+        public final static enum entry A: R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C|
+        public final static enum entry B: R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C|
+        public final static enum entry C: R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C|
+        public final static fun values(): R|kotlin/Array<org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C>| {
+        }
+
+        public final static fun valueOf(value: R|kotlin/String|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C| {
+        }
+
+        public final static val entries: R|kotlin/enums/EnumEntries<org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C>|
+            public get(): R|kotlin/enums/EnumEntries<org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/C>|
+
+    }
+    @R|kotlin/jvm/JvmInline|() public final inline class D : R|kotlin/Any| {
+        public constructor(s: R|kotlin/String|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/D| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val s: R|kotlin/String| = R|<local>/s|
+            public get(): R|kotlin/String|
+
+    }
+    public final class E : R|kotlin/Any| {
+        public constructor(): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/E| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final data class F : R|kotlin/Any| {
+            public constructor(x: R|kotlin/Double|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/E.F| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final val x: R|kotlin/Double| = R|<local>/x|
+                public get(): R|kotlin/Double|
+
+            public final operator fun component1(): R|kotlin/Double|
+
+            public final fun copy(x: R|kotlin/Double| = this@R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/E.F|.R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/E.F.x|): R|org/jub/kotlin/compiler/code-gen/box/fir/differentClasses/E.F|
+
+            public final fun shallowSize(): R|kotlin/Int|
+
+        }
+
+    }

@@ -1,0 +1,23 @@
+FILE: SuperSilly.kt
+    package org.jub.kotlin.compiler.code-gen.ir.box2.super_silly
+
+    public final data class SuperSilly : R|kotlin/Any| {
+        public constructor(siliness: R|kotlin/Int|): R|org/jub/kotlin/compiler/code-gen/ir/box2/super_silly/SuperSilly| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val siliness: R|kotlin/Int| = R|<local>/siliness|
+            public get(): R|kotlin/Int|
+
+        public final val shallowSize: R|kotlin/Int|
+            public get(): R|kotlin/Int| {
+                ^ Int(1337)
+            }
+
+        public final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(siliness: R|kotlin/Int| = this@R|org/jub/kotlin/compiler/code-gen/ir/box2/super_silly/SuperSilly|.R|org/jub/kotlin/compiler/code-gen/ir/box2/super_silly/SuperSilly.siliness|): R|org/jub/kotlin/compiler/code-gen/ir/box2/super_silly/SuperSilly|
+
+        public final fun shallowSize(): R|kotlin/Int|
+
+    }

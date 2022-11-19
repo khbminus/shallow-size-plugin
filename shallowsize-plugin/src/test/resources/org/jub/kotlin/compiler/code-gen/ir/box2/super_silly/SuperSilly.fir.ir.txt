@@ -1,0 +1,102 @@
+FILE fqName:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly fileName:/SuperSilly.kt
+  CLASS CLASS name:SuperSilly modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+    CONSTRUCTOR visibility:public <> (siliness:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly [primary]
+      VALUE_PARAMETER name:siliness index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:SuperSilly modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+    PROPERTY name:siliness visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'siliness: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-siliness> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:siliness visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-siliness> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.<get-siliness>' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+    PROPERTY name:shallowSize visibility:public modality:FINAL [val]
+      FUN name:<get-shallowSize> visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:shallowSize visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-shallowSize> (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+            CONST Int type=kotlin.Int value=1337
+    FUN name:component1 visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.component1' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+    FUN name:copy visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly, siliness:kotlin.Int) returnType:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      VALUE_PARAMETER name:siliness index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.copy' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (siliness: kotlin.Int): org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          CONSTRUCTOR_CALL 'public constructor <init> (siliness: kotlin.Int) [primary] declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+            siliness: GET_VAR 'siliness: kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.copy' type=kotlin.Int origin=null
+    FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          CONST Int type=kotlin.Int value=4
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+              GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly [val]
+          TYPE_OP type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=CAST typeOperand=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+            GET_VAR 'other: kotlin.Any? declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_0: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly [val] declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.equals' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.hashCode' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="SuperSilly("
+            CONST String type=kotlin.String value="siliness="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:siliness type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly declared in org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly.toString' type=org.jub.kotlin.compiler.code-gen.ir.box2.super_silly.SuperSilly origin=null
+            CONST String type=kotlin.String value=")"

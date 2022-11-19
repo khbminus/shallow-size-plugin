@@ -27,14 +27,18 @@ internal fun MessageCollector.log(message: String) {
     )
 }
 
-internal fun CompilerConfiguration.printConfiguration() {
-    val messageCollector = this[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]
-    messageCollector?.log("Shallow size plugin config")
-    messageCollector?.log("")
-    messageCollector?.log("ENABLED: ${PluginConfig.enabled}")
-    messageCollector?.log("Excluded:")
+internal fun PluginConfig.getConfiguration() = buildString {
+    appendLine("Shallow size plugin config")
+    appendLine()
+    appendLine("ENABLED: $enabled")
+    appendLine("Excluded:")
     PluginConfig.excludedClasses.forEach {
-        messageCollector?.log(" - $it")
+        appendLine(" - $it")
     }
-    messageCollector?.log("")
+    appendLine()
+}
+
+internal fun CompilerConfiguration.printConfiguration()  {
+    val messageCollector = this[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]
+    messageCollector?.log(PluginConfig.getConfiguration())
 }
