@@ -1,0 +1,135 @@
+FILE fqName:foo.bar fileName:/simple.kt
+  CLASS CLASS name:Aboba modality:FINAL visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.Aboba
+    CONSTRUCTOR visibility:public <> () returnType:foo.bar.Aboba [primary]
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Aboba modality:FINAL visibility:public superTypes:[kotlin.Any]'
+    FUN name:a visibility:public modality:FINAL <> ($this:foo.bar.Aboba) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Aboba
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun a (): kotlin.Int declared in foo.bar.Aboba'
+          CONST Int type=kotlin.Int value=0
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+  CLASS CLASS name:A modality:FINAL visibility:public [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.A
+    CONSTRUCTOR visibility:public <> (a:kotlin.Int) returnType:foo.bar.A [primary]
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () [primary] declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:A modality:FINAL visibility:public [data] superTypes:[kotlin.Any]'
+    PROPERTY name:a visibility:public modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'a: kotlin.Int declared in foo.bar.A.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-a> visibility:public modality:FINAL <> ($this:foo.bar.A) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:a visibility:public modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:foo.bar.A
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-a> (): kotlin.Int declared in foo.bar.A'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.<get-a>' type=foo.bar.A origin=null
+    FUN name:component1 visibility:public modality:FINAL <> ($this:foo.bar.A) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun component1 (): kotlin.Int [operator] declared in foo.bar.A'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.component1' type=foo.bar.A origin=null
+    FUN name:copy visibility:public modality:FINAL <> ($this:foo.bar.A, a:kotlin.Int) returnType:foo.bar.A
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.A
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.copy' type=foo.bar.A origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (a: kotlin.Int): foo.bar.A declared in foo.bar.A'
+          CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in foo.bar.A' type=foo.bar.A origin=null
+            a: GET_VAR 'a: kotlin.Int declared in foo.bar.A.copy' type=kotlin.Int origin=null
+    FUN GENERATED[ShallowSizeGeneratorKey] name:shallowSize visibility:public modality:FINAL <> ($this:foo.bar.A) returnType:kotlin.Int
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun shallowSize (): kotlin.Int declared in foo.bar.A'
+          CONST Int type=kotlin.Int value=4
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:foo.bar.A, other:kotlin.Any?) returnType:kotlin.Boolean
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean [operator] declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:foo.bar.A
+      VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.equals' type=foo.bar.A origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in foo.bar.A.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in foo.bar.A'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=foo.bar.A
+              GET_VAR 'other: kotlin.Any? declared in foo.bar.A.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in foo.bar.A'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:foo.bar.A [val]
+          TYPE_OP type=foo.bar.A origin=CAST typeOperand=foo.bar.A
+            GET_VAR 'other: kotlin.Any? declared in foo.bar.A.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.equals' type=foo.bar.A origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_0: foo.bar.A [val] declared in foo.bar.A.equals' type=foo.bar.A origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in foo.bar.A'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in foo.bar.A'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:foo.bar.A) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:foo.bar.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in foo.bar.A'
+          CALL 'public open fun hashCode (): kotlin.Int [fake_override] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.hashCode' type=foo.bar.A origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:foo.bar.A) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER GENERATED_DATA_CLASS_MEMBER name:<this> type:foo.bar.A
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in foo.bar.A'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="A("
+            CONST String type=kotlin.String value="a="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: foo.bar.A declared in foo.bar.A.toString' type=foo.bar.A origin=null
+            CONST String type=kotlin.String value=")"
+  FUN name:box visibility:public modality:FINAL <> () returnType:kotlin.Int
+    BLOCK_BODY
+      VAR name:a type:foo.bar.A [val]
+        CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) [primary] declared in foo.bar.A' type=foo.bar.A origin=null
+          a: CONST Int type=kotlin.Int value=2
+      RETURN type=kotlin.Nothing from='public final fun box (): kotlin.Int declared in foo.bar'
+        WHEN type=kotlin.Int origin=IF
+          BRANCH
+            if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQ
+              arg0: CALL 'public final fun shallowSize (): kotlin.Int declared in foo.bar.A' type=kotlin.Int origin=null
+                $this: GET_VAR 'val a: foo.bar.A [val] declared in foo.bar.box' type=foo.bar.A origin=null
+              arg1: CONST Int type=kotlin.Int value=4
+            then: CONST Int type=kotlin.Int value=1
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Int type=kotlin.Int value=0
