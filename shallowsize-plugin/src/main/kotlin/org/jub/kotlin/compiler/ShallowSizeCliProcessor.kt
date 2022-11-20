@@ -11,7 +11,7 @@ private typealias CompilationKeyList<T> = CompilerConfigurationKey<List<T>>
 @OptIn(ExperimentalCompilerApi::class)
 class ShallowSizeCliProcessor : CommandLineProcessor {
     override val pluginId: String
-        get() = PLUGIN_ID
+        get() = Names.PLUGIN_ID
     override val pluginOptions: Collection<AbstractCliOption>
         get() = listOf(ENABLED_OPTION, EXCLUDE_OPTION)
 
@@ -38,7 +38,7 @@ class ShallowSizeCliProcessor : CommandLineProcessor {
         internal val EXCLUDE_OPTION = CliOption(
             optionName = "exclude",
             valueDescription = "<fqname of data class>",
-            description = "Exclude data class from adding shallowSize method",
+            description = "Exclude data class from adding ${Names.pluginName} method",
             allowMultipleOccurrences = true,
             required = false
         )

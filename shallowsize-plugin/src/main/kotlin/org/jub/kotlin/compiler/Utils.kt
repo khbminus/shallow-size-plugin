@@ -3,11 +3,11 @@ package org.jub.kotlin.compiler
 import org.jetbrains.kotlin.cli.common.CLIConfigurationKeys
 import org.jetbrains.kotlin.cli.common.messages.*
 import org.jetbrains.kotlin.config.CompilerConfiguration
+import org.jetbrains.kotlin.util.capitalizeDecapitalize.capitalizeAsciiOnly
 import java.io.File
 import java.io.PrintStream
 
 internal var messageCollector: MessageCollector? = null
-internal const val PLUGIN_ID = "org.jub.kotlin.compiler"
 
 internal fun CompilerConfiguration.initMessageCollector(filePath: String) {
     val file = File(filePath)
@@ -22,13 +22,13 @@ internal fun CompilerConfiguration.initMessageCollector(filePath: String) {
 internal fun MessageCollector.log(message: String) {
     this.report(
         CompilerMessageSeverity.LOGGING,
-        "ShallowSize: $message",
+        "${Names.pluginName}: $message",
         CompilerMessageLocation.create(null),
     )
 }
 
 internal fun PluginConfig.getConfiguration() = buildString {
-    appendLine("Shallow size plugin config")
+    appendLine("${Names.longPluginName.capitalizeAsciiOnly()} plugin config")
     appendLine()
     appendLine("ENABLED: $enabled")
     appendLine("Excluded:")
@@ -41,4 +41,10 @@ internal fun PluginConfig.getConfiguration() = buildString {
 internal fun CompilerConfiguration.printConfiguration()  {
     val messageCollector = this[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]
     messageCollector?.log(PluginConfig.getConfiguration())
+}
+
+internal object Names {
+    const val pluginName = "shallowSize"
+    const val longPluginName = "shallow size"
+    const val PLUGIN_ID = "org.jub.kotlin.compiler"
 }

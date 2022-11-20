@@ -20,6 +20,7 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirRegularClassSymbol
 import org.jetbrains.kotlin.fir.types.ConeTypeProjection
 import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.name.*
+import org.jub.kotlin.compiler.Names
 import org.jub.kotlin.compiler.PluginConfig
 import org.jub.kotlin.compiler.log
 import org.jub.kotlin.compiler.messageCollector
@@ -70,6 +71,6 @@ class ShallowSizeGenerator(session: FirSession) : FirDeclarationGenerationExtens
     override fun getTopLevelClassIds() = setOf<ClassId>()
 
     companion object {
-        val FUNCTION_NAME = Name.identifier("shallowSize")
+        val FUNCTION_NAME = Name.identifier(Names.pluginName)
     }
 }

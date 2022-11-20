@@ -16,7 +16,7 @@ class ShallowSizeExtensionRegistrar : CompilerPluginRegistrar() {
 
     override fun ExtensionStorage.registerExtensions(configuration: CompilerConfiguration) {
         PluginConfig.init(configuration)
-        configuration.initMessageCollector("shallowsize.log")
+        configuration.initMessageCollector("${Names.pluginName}.log")
         messageCollector = configuration[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]
         if (PluginConfig.enabled) {
             FirExtensionRegistrarAdapter.registerExtension(ShallowSizeFirExtensionRegistrar())
