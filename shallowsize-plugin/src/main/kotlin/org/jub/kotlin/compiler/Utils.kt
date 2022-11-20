@@ -38,7 +38,7 @@ internal fun PluginConfig.getConfiguration() = buildString {
     appendLine()
 }
 
-internal fun CompilerConfiguration.printConfiguration()  {
+internal fun CompilerConfiguration.printConfiguration() {
     val messageCollector = this[CLIConfigurationKeys.MESSAGE_COLLECTOR_KEY]
     messageCollector?.log(PluginConfig.getConfiguration())
 }

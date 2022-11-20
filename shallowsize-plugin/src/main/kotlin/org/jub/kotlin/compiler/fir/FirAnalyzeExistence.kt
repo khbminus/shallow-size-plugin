@@ -20,7 +20,7 @@ internal object FirAnalyzeExistence : FirRegularClassChecker() {
             .asSequence()
             .filterIsInstance<FirNamedFunctionSymbol>()
             .filter { it.name == ShallowSizeGenerator.FUNCTION_NAME }
-            .filter { it.fir.valueParameters.isEmpty() } // If overloads are possible
+            .filter { it.fir.valueParameters.isEmpty() }  // If overloads are possible
             .forEach {
                 reporter.reportOn(it.source, Errors.FUNCTION_EXISTS, context)
             }
