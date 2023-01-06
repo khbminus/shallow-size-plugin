@@ -1,12 +1,9 @@
-name: Run diKTat
+name: Gradle Build
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
+on: [push, pull_request]
 
 jobs:
-  diktat_check:
+  build:
     runs-on: ubuntu-20.04
 
     steps:
@@ -16,8 +13,9 @@ jobs:
         with:
           java-version: 11
           distribution: liberica
+
       - name: Gradle Wrapper Validation
         uses: gradle/wrapper-validation-action@v1.0.4
       - uses: gradle/gradle-build-action@v2.1.5
         with:
-          arguments: diktatCheckAll --stacktrace
+          arguments: build --stacktrace -x test
